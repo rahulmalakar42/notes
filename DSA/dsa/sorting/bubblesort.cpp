@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void bubblesort(int arr[], int n)
+//repeatitive swapping if two elements not it order
+
+void bubblesort(int arr[], int size)
 {
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < size; i++)
     {
         int stop = 0, temp = 0;
-        for (int j = 0; j < n - 1; j++)
+        for (int j = 0; j < size - 1; j++)
         {
             if (arr[j] > arr[j + 1])
             {
@@ -22,17 +24,14 @@ void bubblesort(int arr[], int n)
             break;
         }
     }
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d", arr[i]);
-    }
 }
 
 int main()
 {
 
-    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    bubblesort(arr, 10);
+    int arr[] = {5,6,7,2,8,3,4};
+    int sizee=sizeof(arr)/sizeof(arr[0]);
+    bubblesort(arr,sizee);
 
     return 0;
 }

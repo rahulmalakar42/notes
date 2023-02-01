@@ -7,14 +7,13 @@ int main()
     // repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it with the first element of the unsorted portion.
 
     
-    int n; cin>>n;
-    int arr[n];
+    int arr[] = {5,6,7,2,8,3,4};
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
     {
 
         int min = i;
-        for (int j = i + 1; j < n; j++)
+        for (int j = i + 1; j < sizeof(arr)/sizeof(arr[0]); j++)
         {
             if (arr[j] < arr[min])
             {
