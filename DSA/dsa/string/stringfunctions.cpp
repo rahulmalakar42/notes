@@ -1,7 +1,7 @@
-#include <bits/stdc++.h>      
-#include <cstddef>    
-#include<string>
-using namespace std;    
+#include <bits/stdc++.h>
+#include <cstddef>
+#include <string>
+using namespace std;
 
 int main()
 {
@@ -18,12 +18,12 @@ int main()
   // }
   // else{cout<<"no other char is present in s1.";}
 
-  // max_size() represents the theoretical maximum size of a string, 
+  // max_size() represents the theoretical maximum size of a string,
   // while capacity() represents the current size of the memory buffer used by the string.
 
   // .append() - for append to a string, can append any length
   // .push_back() - can only append a char
-  
+
   // .substr(x,y) - for taking a part of the string starting from x index and number of characters = y
 
   // .assign() is a member function of the std::string class that assigns a new value to the string. It can be used to initialize a string with a given value, to copy the value of one string to another, or to set a sub-string of a string to a new value.
@@ -46,8 +46,30 @@ int main()
   // it = str.insert(str.begin()+5,','); // to be(,) not to be: that is the question
   // str.insert (str.end(),3,'.');       // to be, not to be: that is the question(...)
   // str.insert (it+2,str3.begin(),str3.begin()+3); // (or )
-  
 
-  
+  // .erase(10,8) - deletes 8 chars starting from 10th index
+
+  // .replace(2,4,"hi") - replaces 4 chars from 2th index with hi
+
+  //   find_first_of
+  //     Find character in string (public member function)
+
+  // find_last_of
+  //     Find character in string from the end (public member function)
+
+  // find_first_not_of
+  //     Find absence of character in string (public member function)
+
+  // find_last_not_of
+  //     Find non-matching character in string from the end (public member function)
+
+  // substr
+  //     Generate substring (public member function)
+
+  // string s; cin>>s; - will input one string but getline(cin,s) - used for reading the whole line
+
+  // s1.compare(s2) - =0 if both are equal, >0 if either the value of 1st char that doesn't match is larger or s2 is longer
+  // else <0;
+
   return 0;
 }

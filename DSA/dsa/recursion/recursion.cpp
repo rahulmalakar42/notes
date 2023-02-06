@@ -1,18 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void print(int i,int n){
-    if(i>n){
-        return;
+int print(int n){
+    if(n==0){   
+        return n;
     }
-    cout<<n<<endl;
-   
-    print(i,n-1);
+    return n + print(n-1);
 }
 
 int main(){
     int n; cin>>n;
-    print(1,n);
-
+    cout<<print(n);
     return 0;
 }
