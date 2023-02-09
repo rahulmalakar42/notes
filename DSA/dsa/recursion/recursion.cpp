@@ -8,6 +8,8 @@ int print(int n){
     return n + print(n-1);
 }
 
+//learn normal recursion, backtracking
+
 int main(){
     int n; cin>>n;
     cout<<print(n);
