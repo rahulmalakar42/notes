@@ -57,8 +57,9 @@ int main(){
 
     //sqrt - implemented by binary search
     long double i=0, j=1e9; long double ans=-1;
+    long double ans1 = -1;
     int b; cin>>b;
-    while((j-i)>=1e-9){
+    while((j-i)>=1e-15){
         long double mid=i+(j-i)/2;
         if(mid*mid*mid<=b){
             i = mid;
@@ -68,7 +69,19 @@ int main(){
             j=mid;
         }        
     }
-    cout<<fixed<<setprecision(20)<<ans<<endl;
+    i=0;j=1e9;
+    for(int km=0;km<300000;km++){
+        long double mid=i+(j-i)/2;
+        if(mid*mid*mid<=b){
+            i = mid;
+            ans1=mid;
+        }
+        else{
+            j=mid;
+        }
+    }
+    cout<<fixed<<setprecision(100)<<pow(ans,3)<<endl;
+    cout<<fixed<<setprecision(100)<<pow(ans1,3)<<endl;
 
     return 0;
 }
